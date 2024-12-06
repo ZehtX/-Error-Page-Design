@@ -1,0 +1,165 @@
+html, body {
+  height: 100vh;
+}
+
+html {
+  background: linear-gradient(#475cb7, #4a4f7c); /* Color original y un color más claro */
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-family: 'Varela Round', Sans-serif;
+  text-shadow: 0 30px 10px rgba(0, 0, 0, .15);
+  position: relative; /* Para que las burbujas se posicionen correctamente */
+}
+
+body:before, body:after {
+  content: '';
+  /* background: linear-gradient(#4a4f7c, #203075); Invertido para el efecto de fondo */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body:before {
+  height: 105vmax;
+  width: 105vmax;
+  z-index: -4;
+}
+
+body:after {
+  height: 80vmax;
+  width: 80vmax;
+  z-index: -3;
+}
+
+.main {
+  text-align: center;
+  z-index: 5;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 95px;
+  margin: 0;
+}
+
+button {
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  padding: 0 12px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
+  outline: none;
+  color: #FFF;
+  font: 400 16px/2.5 Nunito, 'Varela Round', Sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.bubble {
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  border-radius: 50%;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
+  position: absolute;
+}
+
+/* Estilos para las burbujas con tamaños y posiciones aleatorias */
+.bubble:nth-child(1) {
+  top: 5vh;
+  left: 10vw;
+  height: 12vmin; /* 10% más pequeño */
+  width: 12vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(2) {
+  top: 15vh;
+  left: 30vw;
+  height: 8vmin; /* 10% más pequeño */
+  width: 8vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(3) {
+  top: 10vh;
+  right: 15vw;
+  height: 16vmin; /* 10% más pequeño */
+  width: 16vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(4) {
+  top: 20vh;
+  right: 5vw;
+  height: 9.6vmin; /* 10% más pequeño */
+  width: 9.6vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(5) {
+  top: 50vh;
+  left: 5vw;
+  height: 14.4vmin; /* 10% más pequeño */
+  width: 14.4vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(6) {
+  top: 40vh;
+  left: 35vw;
+  height: 11.4vmin; /* 10% más pequeño */
+  width: 11.4vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(7) {
+  top: 30vh;
+  right: 20vw;
+  height: 12.96vmin; /* 10% más pequeño */
+  width: 12.96vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(8) {
+  top: 70vh;
+  left: 15vw;
+  height: 17.82vmin; /* 10% más pequeño */
+  width: 17.82vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(9) {
+  top: 80vh;
+  right: 10vw;
+  height: 19.44vmin; /* 10% más pequeño */
+  width: 19.44vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(10) {
+  top: 45vh;
+  left: 25vw;
+  height: 21.06vmin; /* 10% más pequeño */
+  width: 21.06vmin; /* 10% más pequeño */
+}
+
+@media (max-height: 720px) {
+    body:before {
+        height: 100vh;
+        width: 100vw;
+        z-index: -4;
+      }
+      
+      body:after {
+        height: 80vh;
+        width: 80vw;
+        z-index: -3;
+      }
+
+      .main{
+        margin-top: -25%;
+      }
+
+}

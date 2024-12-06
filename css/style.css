@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total */
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 120vh; /* Asegura que el body ocupe toda la altura */
+  font-family: 'Arial', sans-serif; /* Tipografía más profesional */
+}
+
+body {
+  background: linear-gradient(135deg, #4a4f7c, #475cb7);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinear al inicio para permitir márgenes */
+  position: relative; /* Para posicionar las burbujas */
+  overflow-y: auto; /* Permitir desplazamiento vertical */
+}
+
+.bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0; /* Detrás del contenido */
+}
+
+.bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0.7;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 720px; /* Limitar el ancho a 720px */
+  width: 90%; /* Ancho responsivo */
+  padding: 30px;
+  margin-top: 40px; /* Margen superior */
+  margin-bottom: 40px; /* Margen inferior */
+  position: relative; /* Para que el contenido esté por encima de las burbujas */
+  z-index: 1; /* Por encima de las burbujas */
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.3em; /* Tamaño de fuente más grande */
+  color: #333; /* Color oscuro para el título */
+}
+
+h2 {
+  font-size: 1.6em; /* Tamaño de fuente más pequeño que h1 */
+  color: #333; /* Color oscuro para los subtítulos */
+  margin: 20px 0 10px;
+  border-bottom: 2px solid #475cb7; /* Línea debajo del subtítulo */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea */
+}
+
+.error-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.error-list li {
+  margin: 10px 0;
+}
+
+.error-list a {
+  text-decoration: none;
+  color: #FF5733; /* Color oscuro brillante para los enlaces */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.error-list a:hover {
+  color: #D61A6F; /* Color al pasar el mouse */
+}
+
+.bubble {
+  background: linear-gradient(#EC5DC1, #D61A6F);
+  border-radius: 50%;
+  box-shadow: 0 30px 15px rgba(0, 0, 0, .15);
+  position: absolute;
+}
+
+/* Estilos para las burbujas con tamaños y posiciones aleatorias */
+.bubble:nth-child(1) {
+  top: 5vh;
+  left: 10vw;
+  height: 12vmin; /* 10% más pequeño */
+  width: 12vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(2) {
+  top: 15vh;
+  left: 30vw;
+  height: 8vmin; /* 10% más pequeño */
+  width: 8vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(3) {
+  top: 10vh;
+  right: 15vw;
+  height: 16vmin; /* 10% más pequeño */
+  width: 16vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(4) {
+  top: 20vh;
+  right: 5vw;
+  height: 9.6vmin; /* 10% más pequeño */
+  width: 9.6vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(5) {
+  top: 50vh;
+  left: 5vw;
+  height: 14.4vmin; /* 10% más pequeño */
+  width: 14.4vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(6) {
+  top: 40vh;
+  left: 35vw;
+  height: 11.4vmin; /* 10% más pequeño */
+  width: 11.4vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(7) {
+  top: 30vh;
+  right: 20vw;
+  height: 12.96vmin; /* 10% más pequeño */
+  width: 12.96vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(8) {
+  top: 70vh;
+  left: 15vw;
+  height: 17.82vmin; /* 10% más pequeño */
+  width: 17.82vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(9) {
+  top: 80vh;
+  right: 10vw;
+  height: 19.44vmin; /* 10% más pequeño */
+  width: 19.44vmin; /* 10% más pequeño */
+}
+
+.bubble:nth-child(10) {
+  top: 45vh;
+  left: 25vw;
+  height: 21.06vmin; /* 10% más pequeño */
+  width: 21.06vmin; /* 10% más pequeño */
+}
+
+@media (max-width: 720px) {
+  h1 {
+      font-size: 2em; /* Ajustar tamaño de h1 en pantallas pequeñas */
+  }
+
+  h2 {
+      font-size: 1.4em; /* Ajustar tamaño de h2 en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 400px) {
+
+  html, body {
+    height: 95vh;
+  }
+
+  .container{
+    margin-top: 80px;
+  }
+
+  h2{
+    font-size: 1.3rem;
+  }
+  
+}
